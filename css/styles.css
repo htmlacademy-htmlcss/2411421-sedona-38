@@ -14,6 +14,10 @@
     font-display: swap;
   }
 
+  html {
+    height: 100%;
+  }
+
     body {
         font-family: "PT Sans", sans-serif;
         font-size: 18px;
@@ -21,16 +25,46 @@
         background-color: #F2F2F2;
         width:1280px;
         color:#000000;
+        margin: 0;
+        
+        height: 100%;
       }
       .page-container {
         background-color:#ffffff;
         text-align: center;
         width:1200px;
         margin:0 auto;
+        display: flex;
+        flex-direction: column;
+        min-height:100%;
+      }
+      .main-container {
+        flex-grow: 1;
       }
       /* Хэдер */
+.page-header {
+  padding-right:70px;
+  padding-left:70px;
+}
+      .logo {
+        width: 140px;
+      }
+      .navigation-item {
+        width: 140px;
+      }
+      .navigation-user .navigation-item {
+        width: 44px;
+      }
+      .navigation {
+        display:flex;
+        margin: 0 auto;
+      }
       .navigation-list {
         list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display:flex;
+        align-items: center;
       }
       .navigation-link {
         font-size: 20px;
@@ -38,6 +72,9 @@
         font-weight: 700;
         text-decoration: none;
         color:#000000;
+    }
+    .navigation-user {
+      margin-left: auto;
     }
     .button-type-one{
       font-family: inherit;
@@ -49,17 +86,24 @@
       text-decoration: none;
       text-transform: uppercase;
       background-color: #756157;
-      
+      width:160px;
     }
     /*хиро*/
     .hero {
         background-image: url(../images/hero-background.jpg);
-        width:1200px;
         height:485px;
         background-color:aqua;
         background-repeat: no-repeat;
     }
+    .welcoming-text {
+      display: block;
+      margin: 0 auto;
+    }
     /*преимущества*/
+    .advamtages-inroduction-wrapper {
+      padding-top:69px;
+      padding-bottom:69px;
+    }
     .advantages {
       text-align: center;
     }
@@ -80,11 +124,29 @@
     .advantages-list {
       list-style-type: none;
       background-color: #83B3D31F;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap:wrap;
+      
       
     }
+   .advantage-text-wrapper{
+    width:230px;
+    padding-left: 85px;
+    padding-right: 85px;
+    padding-top: 102px;
+    padding-bottom: 102px;
+   
+    
+   }
     .advantages-item:first-child, .advantages-item:last-child {
       background-color:#82B3D3;
       color:#ffffff;
+      display:flex;
+    }
+    .advantages-item:last-child{
+      flex-direction: row-reverse;
     }
     .advantages-item:nth-child(3) {
     background-color: #83B3D333;
@@ -103,11 +165,25 @@
         text-align: center;
     }
     /*Услуги*/
+    .services-introduction-wrapper {
+      padding-top: 64px;
+      padding-bottom: 64px;
+    }
     .services {
       text-align: center;
     }
     .services-list {
       list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+    .services-item {
+      width:400px;
+      padding-top: 80px;
+      padding-bottom:80px;
+      padding-left:85px;
+      padding-right:85px;
     }
     .services-item:first-child, .services-item:last-child {
       background-color: #83B3D31F;
@@ -128,26 +204,33 @@
     /*Поиск гостиницы*/
     .search {
       text-align: center;
+      margin:0 auto;
+      padding:96px 304px;
     }
     .search-link {
       font-family: inherit;
       font-size: 16px;
       line-height: 20 px;
       font-weight: 700;
-      text-align: center;
+      
       color: #ffffff;
       text-decoration: none;
       text-transform: uppercase;
       background-color: #756157;
     }
+    .link-wrapper{
+      width:376px;
+      
+    }
     /*Подписка*/
     .subscription {
       background-image: url(../images/search-background.jpg);
       background-color:aqua;
-      width:1200px;
-        height:415px;
         color:#ffffff;
-        text-align: center;}
+        margin: 0 auto;
+        padding:96px 268px 104px;
+       
+    }
     .button-type-two {
       font-family: inherit;
       font-size: 20px;
@@ -167,8 +250,27 @@
       
     
 /*Контакты*/
+.page-footer{
+  padding-top:40px;
+  padding-bottom:30px;
+
+}
+.page-footer-container {
+  display: flex;
+  width: 1060px;
+  margin: 0 auto;
+  justify-content:space-between;
+
+}
 .contacts-list{
   list-style-type: none;
+  display:flex;
+  margin: 0;
+  padding: 0;
+}
+.contacts-list-item{
+  width: 48px;
+
 }
 .footer-phone-link {
   text-decoration: none;
@@ -176,6 +278,7 @@
   font-size: 40px;
   line-height: 40 px;
 }
+
 /*catalog-header*/
 
 .inner-header{
@@ -197,6 +300,9 @@
     color: #ffffff;
     font-size: 16px;
       line-height: 21px;
+      margin: 0;
+      padding: 0;
+      display:flex;
   }
   .breadcrumbs-link {
     text-decoration: none;
@@ -211,7 +317,11 @@
     font-size: 18px;
       line-height: 23 px;
   }
-  
+  .filters-container {
+    display: flex;
+    width:1060px;
+    justify-content: space-between;
+  }
   .button-type-two {
     font-family: inherit;
     font-size: 16px;
@@ -228,7 +338,16 @@
       font-weight: 700; 
       background-color: transparent;
   }
+  .filters-wrapper{
+    width:151px;
+  }
 /*результаиты поиска*/
+.results-wrapper{
+  display: flex;
+}
+.search-results {
+  padding-top:50px;
+}
 .search-results-title {
   font-size: 30px;
   line-height: 36px;
@@ -242,9 +361,22 @@
 }
 .view-type-list {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+.view-wrapper {
+  display: flex;
 }
 .hotels-list {
   list-style-type: none;
+  margin:0;
+  padding:0;
+  display: flex;
+  flex-wrap:wrap;
+}
+.hotels-list-item {
+  width:340px;
 }
 .hotels-list-link {
   font-size: 24px;
@@ -254,6 +386,7 @@
   color: #333333;
   text-decoration: none;
 }
+
 .hotels-type {
   font-size: 18px;
   line-height: 21px;
@@ -280,6 +413,12 @@
 }
 .pagination {
   list-style-type: none;
+  margin:0;
+  padding:0;
+  display: flex;
+}
+.pagination-item {
+  width:60px;
 }
 .pagination-link {
   font-size: 20px;
@@ -297,4 +436,5 @@
 /*catalog subscription*/
 .catalog-subscription {
   text-align: center;
+  padding:96px 268px 104px;
 }
