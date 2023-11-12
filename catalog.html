@@ -49,15 +49,16 @@
 </header>
     <main class="main-container main-inner">
         <header class="inner-header">
+          <h1>Гостиницы Седоны</h1>
             <ul class="breadcrubs">
-                <li class="breadcrumbs-item visually-hidden">
+                <li class="breadcrumbs-item ">
                     <a class="breadcrumbs-link" href="index.html"> <img src="images/main-icon.svg" width="12"height="12" alt="Главная"> </a>
                   </li>
                   <li class="breadcrumbs-item">
                     <a class="breadcrumbs-link" href="catalog.html">Гостиницы</a>
                   </li>
             </ul>
-            <h1>Гостиницы Седоны</h1>
+            
         
         <section class="filters">
             <h2 class="visually-hidden">Список фильтров для поиска отеля</h2>
@@ -87,17 +88,17 @@
               <fieldset class="catalog-filter-group">
                 <legend class="catalog-filter-title">Тип жилья</legend>
                 <label class="control">
-                    <input class="control-input" type="radio" name="hotel" checked>
+                    <input class="control-input" type="radio" value="hotel" name="accomodation-type" checked>
       
                     Гостиница
                   </label>
                   <label class="control">
-                    <input class="control-input" type="radio" name="motel" >
+                    <input class="control-input" type="radio" value="motel" name="accomodation-type" >
       
                     Мотель
                   </label>
                   <label class="control">
-                    <input class="control-input" type="radio" name="apartment">
+                    <input class="control-input" type="radio" value="apartment" name="accomodation-type">
       
                     Апартаменты
                   </label>
@@ -139,19 +140,19 @@
                   
                   <ul class="view-type-list">
                     <li class="view-type-item"><button>
-                      <img src="images/view-list.svg" width="16" height="14">
+                      <div class="view-type-icon"><img src="images/view-list.svg" width="16" height="14"></div>
                       <span class="visually-hidden">Показать таблицей</span>
                     </button>
                   </li>
                     <li class="view-type-item">
                       <button>
-                        <img src="images/view-one-window.svg" width="16" height="14">
+                        <div class="view-type-icon"><img src="images/view-one-window.svg" width="16" height="14"> 
                       <span class="visually-hidden">Показать по одному</span>
                     </button>
                   </li>
                     <li class="view-type-item">
                       <button>
-                        <img src="images/view-windows.svg" width="16" height="14">
+                        <div class="view-type-icon"><img src="images/view-windows.svg" width="16" height="14"></div>
                         <span class="visually-hidden">Показать списком</span>
                       </button>
                     </li>
@@ -229,12 +230,14 @@
               <h2 class="visually-hidden">Подписка</h2>
               <b class="introduction-title">Подпишитесь на рассылку</b>
               <p class="introduction-text">Только полезная информация и никакого спама, честное бойскаутское!</p>
-          <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
+             <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
               <p>
+                <input type="email" class="placeholder-word" id="user-email" placeholder="Ваш e-mail"> 
               <button class="button-type-two" type="submit">Подписаться</button>
-              <input type="email" class="placeholder-word" id="user-email" placeholder="Ваш e-mail"> 
+              
           </p>
           </form>
+          
             </section>
     </main>
     <footer class="page-footer">
