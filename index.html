@@ -49,7 +49,7 @@
     <main class="main-container main-index">
         <section class="hero">
             <h1 class="visually-hidden">Седона</h1>
-            <img src="images/welcome.png" width="458" height="352" class="welcoming-text" alt="Welcome to the gorgeous Sedona. Because the Grand Canyon sucks!">
+            <div class="welcoming-text"><img src="images/welcome.png" width="458" height="352" alt="Welcome to the gorgeous Sedona. Because the Grand Canyon sucks!"></div>
         </section>
         <section class="advantages">
             <div class="advamtages-inroduction-wrapper">
@@ -65,7 +65,7 @@
                     <p class="advantages-description">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
                 </div>
                 <div class="advantage-image-wrapper">
-                    <img src="images/sedona_view.jpg" width="800" height="385" alt="Дома и деревья">
+                    <img src="images/sedona_view.jpg" width="800" height="385" alt="Дома и деревья"> 
                 </div>
                 </li>
                 <li class="advantages-item">
@@ -108,19 +108,19 @@
         </div>
             <ul class="services-list">
                 <li class="services-item">
-                    <img src="images/accomodation.svg" width="75" height="72">
+                    <img src="images/accomodation.svg" class="services-icon" width="75" height="72">
                     <h3 class="services-title">Жильё</h3>
                     <p class="services-description">Рекомендуем пожить в настоящем мотеле, 
                         всё как в кино!</p>
                 </li>
                 <li class="services-item">
-                    <img src="images/food.svg" width="75" height="72">
+                    <img src="images/food.svg" class="services-icon" width="75" height="72">
                     <h3 class="services-title">Еда</h3>
                     <p class="services-description">Всегда заказывайте
                         топовый фирменный бургер, вы не разочаруетесь!</p>
                 </li>
                 <li class="services-item">
-                    <img src="images/souvenirs.svg" width="75" height="72">
+                    <img src="images/souvenirs.svg" class="services-icon" width="75" height="72">
                     <h3 class="services-title">Сувениры</h3>
                     <p class="services-description">Не только китайского, 
                         но и настоящего местного производства!</p>
@@ -139,10 +139,12 @@
             <p class="introduction-text">Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
             <p>
-            <button class="button-type-two" type="submit">Подписаться</button>
             <input type="email" class="placeholder-word" id="user-email" placeholder="Ваш e-mail"> 
+            <button class="button-type-two" type="submit">Подписаться</button>
+            
         </p>
         </form>
+    
         </section>
     </main>
     <footer class="page-footer">
